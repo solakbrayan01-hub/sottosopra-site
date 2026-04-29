@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Sottosopra · Officina Rigenerativa</title>
+<meta name="description" content="Sottosopra è un'officina rigenerativa nelle Dolomiti. Coltiviamo il suolo, e il cibo viene da sé. Cassetta settimanale, vendita diretta, mercati e visite guidate.">
+<meta property="og:title" content="Sottosopra · Officina Rigenerativa">
+<meta property="og:description" content="Non coltiviamo verdure. Coltiviamo il suolo. Tutto il resto, viene da sé.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shared/style.css">
+<link rel="stylesheet" href="shared/home.css">
+</head>
+<body>
+
+<div class="torch"></div>
+
+<header class="header">
+  <a href="index.html" class="logo">
+    <strong>Sotto</strong><span class="thin">sopra</span>
+    <small>OFFICINA RIGENERATIVA</small>
+  </a>
+  <nav class="main">
+    <a href="metodo.html">Il metodo</a>
+    <a href="coltiviamo.html">Cosa coltiviamo</a>
+    <a href="diario.html">Diario</a>
+    <a href="officina.html">Officina</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="cassetta.html" class="btn-cta">Acquista →</a>
+  </nav>
+  <button class="menu-toggle" aria-label="Menu"><div></div><div></div><div></div></button>
+</header>
+
+<section class="hero" id="hero" data-dark="false" style="padding: 0;">
+  <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+  <div class="layer-sopra" id="layer-sopra">
+    <div class="corner-label top-left">↑ SOPRA</div>
+    <div class="corner-label top-right">LA PIANTA</div>
+  </div>
+  <div class="layer-sotto" id="layer-sotto" data-dark="true">
+    <div class="corner-label bottom-left">↓ SOTTO</div>
+    <div class="corner-label bottom-right">LA RADICE</div>
+  </div>
+  <div class="horizon" id="horizon"></div>
+  <div class="title-strip" id="title-strip">
+    <h1><span class="sotto">Sotto</span><span class="sopra">sopra</span></h1>
+    <p class="tagline" id="tagline">La rivoluzione parte dalle radici</p>
+  </div>
+  <svg class="root-svg" id="root-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+    <g id="plant-breathe" style="transform-origin: 400px 300px; transform-box: fill-box;">
+      <g id="plant-group" opacity="0">
+        <path d="M 400 300 L 400 230" stroke="#3b5d2a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M 400 270 Q 370 255 355 235 Q 385 248 400 265" fill="#5a8a3a"/>
+        <path d="M 400 260 Q 432 245 448 222 Q 418 240 400 258" fill="#6a9a44"/>
+        <path d="M 400 240 Q 388 218 388 195 Q 402 215 400 238" fill="#4a7a2a"/>
+        <circle id="fruit1" cx="392" cy="200" r="4.5" fill="#8a3324" opacity="0"/>
+        <circle id="fruit2" cx="406" cy="208" r="3.5" fill="#8a3324" opacity="0"/>
+      </g>
+    </g>
+    <path id="taproot" d="M 400 300 C 398 340, 405 380, 398 420 C 392 460, 408 500, 402 540 C 398 575, 405 600, 400 640" stroke="#c4a878" stroke-width="3" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="root-l1" d="M 400 340 Q 370 355 340 380 Q 320 395 305 420" stroke="#c4a878" stroke-width="1.8" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="root-r1" d="M 400 350 Q 432 365 460 390 Q 480 405 495 430" stroke="#c4a878" stroke-width="1.8" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="root-l2" d="M 400 400 Q 360 420 320 450 Q 290 475 270 510" stroke="#c4a878" stroke-width="1.5" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="root-r2" d="M 400 410 Q 440 430 480 460 Q 510 485 530 520" stroke="#c4a878" stroke-width="1.5" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="root-l3" d="M 400 470 Q 372 495 350 530 Q 335 555 325 585" stroke="#a89a82" stroke-width="1.2" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="root-r3" d="M 400 480 Q 428 505 450 540 Q 465 565 475 595" stroke="#a89a82" stroke-width="1.2" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="hair-l1" d="M 305 420 Q 290 435 278 455" stroke="#a89a82" stroke-width="0.8" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="hair-l2" d="M 270 510 Q 255 525 245 550" stroke="#a89a82" stroke-width="0.8" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="hair-r1" d="M 495 430 Q 510 445 522 465" stroke="#a89a82" stroke-width="0.8" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="hair-r2" d="M 530 520 Q 545 535 555 560" stroke="#a89a82" stroke-width="0.8" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="hair-c1" d="M 398 420 Q 380 432 370 450" stroke="#a89a82" stroke-width="0.7" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <path id="hair-c2" d="M 402 540 Q 420 555 425 580" stroke="#a89a82" stroke-width="0.7" fill="none" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+    <circle id="dot1" cx="340" cy="430" r="2" fill="#8a3324" opacity="0"/>
+    <circle id="dot2" cx="470" cy="445" r="2.5" fill="#8a3324" opacity="0"/>
+    <circle id="dot3" cx="295" cy="500" r="1.8" fill="#c4a878" opacity="0"/>
+    <circle id="dot4" cx="510" cy="495" r="2" fill="#c4a878" opacity="0"/>
+    <circle id="dot5" cx="380" cy="555" r="1.5" fill="#8a3324" opacity="0"/>
+    <circle id="dot6" cx="430" cy="570" r="1.8" fill="#c4a878" opacity="0"/>
+  </svg>
+  <div class="info-tag left" id="info-1" style="left: 64px; top: 56%;">−10 cm<small>RADICI<br>SECONDARIE</small></div>
+  <div class="info-tag right" id="info-2" style="right: 64px; top: 70%;">−30 cm<small>FUNGHI<br>MICORRIZICI</small></div>
+  <div class="info-tag left" id="info-3" style="left: 64px; bottom: 80px;">−60 cm<small>VITA<br>MICROBICA</small></div>
+  <div class="scroll-hint" id="scroll-hint">USA LA ROTELLA · ↑ SU / ↓ GIÙ</div>
+  <div class="continue-arrow" id="continue-arrow">
+    <div class="label">CONTINUA SOTTO</div>
+    <svg id="arrow-bounce" viewBox="0 0 40 50" style="width: 32px; height: 40px; display: block; margin: 0 auto;">
+      <path d="M 20 5 L 20 38 M 8 26 L 20 38 L 32 26" stroke="#c4a878" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <button class="reset-btn" id="reset-btn">↺ AZZERA</button>
+</section>
+
+<section class="manifesto" data-dark="true">
+  <p class="pre">— BENVENUTO SOTTO —</p>
+  <p class="body">
+    Non coltiviamo verdure.<br>
+    <strong>Coltiviamo il suolo.</strong><br>
+    Tutto il resto, viene da sé.
+  </p>
+  <a class="link-underline" href="metodo.html">Scopri il metodo →</a>
+</section>
+
+<section id="cassetta">
+  <div class="section-header">
+    <h2>Porta a casa il sotto</h2>
+    <span class="meta">DOVE TROVI I NOSTRI PRODOTTI</span>
+  </div>
+  <div class="cassetta-card">
+    <div class="content">
+      <div>
+        <span class="badge-pill">★ LA NOSTRA OFFERTA</span>
+        <h3>La Cassetta<br>Sottosopra</h3>
+        <p>Ogni settimana una cassetta da 6 o 10 kg con quello che il campo dà in quel momento. Mai congelato, mai prima maturazione, mai sopra di stagione. Solo quello che il suolo regge oggi.</p>
+        <div class="price-grid">
+          <div>
+            <div class="price-label">PICCOLA · 6 KG</div>
+            <div class="price">€28<small>/sett.</small></div>
+          </div>
+          <div>
+            <div class="price-label">FAMIGLIA · 10 KG</div>
+            <div class="price">€42<small>/sett.</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="cassetta.html" class="btn-primary btn-primary-light">Prenota la cassetta →</a>
+        <a href="cassetta.html#come-funziona" class="btn-secondary">Come funziona</a>
+      </div>
+    </div>
+    <div class="cassetta-illustration">
+      <svg viewBox="0 0 300 320" style="width: 100%; height: 100%;" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="320" fill="#3a2a1a"/>
+        <rect x="50" y="140" width="200" height="120" fill="#5a3a1a" stroke="#1a1410" stroke-width="1"/>
+        <line x1="50" y1="170" x2="250" y2="170" stroke="#1a1410" stroke-width="0.5" opacity="0.5"/>
+        <line x1="50" y1="200" x2="250" y2="200" stroke="#1a1410" stroke-width="0.5" opacity="0.5"/>
+        <line x1="50" y1="230" x2="250" y2="230" stroke="#1a1410" stroke-width="0.5" opacity="0.5"/>
+        <line x1="100" y1="140" x2="100" y2="260" stroke="#1a1410" stroke-width="0.5" opacity="0.5"/>
+        <line x1="150" y1="140" x2="150" y2="260" stroke="#1a1410" stroke-width="0.5" opacity="0.5"/>
+        <line x1="200" y1="140" x2="200" y2="260" stroke="#1a1410" stroke-width="0.5" opacity="0.5"/>
+        <circle cx="90" cy="135" r="22" fill="#a83a26"/>
+        <path d="M90 113 Q85 105 80 100 M90 113 Q95 105 100 100" stroke="#3b5d2a" stroke-width="2" fill="none"/>
+        <ellipse cx="135" cy="130" rx="18" ry="26" fill="#c4a878"/>
+        <path d="M135 105 Q130 96 125 92 M135 105 Q140 96 145 92" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+        <circle cx="175" cy="135" r="14" fill="#7a2a3a"/>
+        <circle cx="190" cy="138" r="11" fill="#7a2a3a"/>
+        <path d="M180 122 L180 116 M188 124 L188 118" stroke="#3b5d2a" stroke-width="1.5"/>
+        <path d="M215 132 Q210 120 215 105 Q225 115 220 130" fill="#5a8a3a"/>
+        <path d="M220 120 L220 100" stroke="#3b5d2a" stroke-width="1.5"/>
+        <rect x="80" y="245" width="60" height="22" rx="4" fill="#f5f1e8" stroke="#1a1410" stroke-width="0.5"/>
+        <text x="110" y="260" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#1a1410">SOTTOSOPRA</text>
+      </svg>
+    </div>
+  </div>
+  <div class="channels-grid">
+    <a href="officina.html#vendita-diretta" class="channel-card" style="text-decoration:none;">
+      <div class="num">CANALE 02</div>
+      <h4>Vendita diretta</h4>
+      <p>In azienda, mercoledì e sabato. Vieni, scegli, paghi solo quello che porti via.</p>
+      <span class="link">Vedi orari →</span>
+    </a>
+    <a href="officina.html#mercati" class="channel-card" style="text-decoration:none;">
+      <div class="num">CANALE 03</div>
+      <h4>Mercati contadini</h4>
+      <p>Bolzano (sabato), Bressanone (giovedì), Merano (1° venerdì del mese).</p>
+      <span class="link">Calendario mercati →</span>
+    </a>
+    <a href="contatti.html#b2b" class="channel-card" style="text-decoration:none;">
+      <div class="num">CANALE 04</div>
+      <h4>Ristoranti e GAS</h4>
+      <p>Forniamo cucine attente e gruppi d'acquisto solidale. Listino su richiesta.</p>
+      <span class="link">Richiedi listino B2B →</span>
+    </a>
+  </div>
+</section>
+
+<section class="metodo-home" id="metodo">
+  <div class="section-header">
+    <h2>Il metodo</h2>
+    <span class="meta">04 PRINCIPI / OFFICINA RIGENERATIVA</span>
+  </div>
+  <div class="metodo-grid">
+    <div class="metodo-cell">
+      <div class="num">N° 01</div>
+      <h3>Suolo vivo</h3>
+      <p>Minima lavorazione, copertura permanente, radici tutto l'anno. Il terreno è un organismo, non un magazzino.</p>
+    </div>
+    <div class="metodo-cell">
+      <div class="num">N° 02</div>
+      <h3>Biodiversità</h3>
+      <p>Rotazioni ampie, consociazioni, alberi tra i campi. Più specie convivono, più il sistema è forte.</p>
+    </div>
+    <div class="metodo-cell">
+      <div class="num">N° 03</div>
+      <h3>Autonomia</h3>
+      <p>Compost, preparati microbiologici, gestione dell'acqua come spugna. L'azienda nutre se stessa.</p>
+    </div>
+    <div class="metodo-cell">
+      <div class="num">N° 04</div>
+      <h3>Etica</h3>
+      <p>Benessere animale, equità sociale, lavoro dignitoso. Rigenerare significa anche le persone.</p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="metodo.html" class="link-underline" style="color: var(--text-primary); border-color: var(--text-primary);">Approfondisci ogni principio →</a>
+  </div>
+</section>
+
+<section class="calendar-section" id="cosa-coltiviamo">
+  <div class="section-header">
+    <h2>Cosa coltiviamo</h2>
+    <span class="meta">CALENDARIO STAGIONALE</span>
+  </div>
+  <div class="calendar-grid">
+    <div class="calendar-wrap">
+      <svg id="calendar-svg" viewBox="0 0 400 400" style="width: 100%; height: 100%;">
+        <circle cx="200" cy="200" r="180" fill="none" stroke="#1a1410" stroke-width="0.5"/>
+        <circle cx="200" cy="200" r="120" fill="none" stroke="#1a1410" stroke-width="0.3" stroke-dasharray="2 3"/>
+        <circle cx="200" cy="200" r="60" fill="#ede5d2" stroke="#1a1410" stroke-width="0.5"/>
+        <g id="month-marks"></g>
+        <text x="200" y="195" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#7a6f5e" letter-spacing="2">CICLO</text>
+        <text x="200" y="210" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="14" fill="#1a1410" font-style="italic">stagionale</text>
+        <g id="product-arcs"></g>
+        <line id="month-pointer" x1="200" y1="200" x2="200" y2="20" stroke="#3b5d2a" stroke-width="1.5" opacity="0.85"/>
+      </svg>
+    </div>
+    <div>
+      <div class="month-display">MESE SELEZIONATO</div>
+      <h3 class="month-name" id="month-name">Giugno</h3>
+      <div class="month-display" style="margin-bottom: 14px;">IN RACCOLTA</div>
+      <div class="month-products" id="month-products"></div>
+      <div class="legend">
+        <div class="legend-item"><span class="dot" style="background:#d4533a;"></span>Ortaggi</div>
+        <div class="legend-item"><span class="dot" style="background:#c4a878;"></span>Radici</div>
+        <div class="legend-item"><span class="dot" style="background:#6a8a3a;"></span>Erbe</div>
+        <div class="legend-item"><span class="dot" style="background:#7a2a3a;"></span>Frutta</div>
+      </div>
+      <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="cassetta.html" class="btn-primary">Prenota la cassetta →</a>
+        <a href="coltiviamo.html" class="btn-outline-dark">Catalogo completo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="diario" id="diario" data-dark="true">
+  <div class="section-header dark">
+    <h2>Cosa succede sotto</h2>
+    <span class="meta">DIARIO / DAL CAMPO</span>
+  </div>
+  <div class="diario-grid">
+    <a href="diario-articolo.html" class="diario-card featured" style="text-decoration:none;">
+      <div class="img-wrap">
+        <svg viewBox="0 0 200 150" style="width: 100%; height: 100%;" preserveAspectRatio="xMidYMid slice">
+          <rect width="200" height="150" fill="#3a2a1a"/>
+          <path d="M40 40 Q35 60 30 90 Q28 110 25 140" stroke="#c4a878" stroke-width="1.5" fill="none"/>
+          <path d="M40 40 Q50 65 55 95 Q58 115 60 140" stroke="#c4a878" stroke-width="1.5" fill="none"/>
+          <path d="M40 40 Q45 70 48 100 Q50 120 50 140" stroke="#c4a878" stroke-width="1" fill="none"/>
+          <circle cx="120" cy="80" r="3" fill="#c4a878" opacity="0.6"/>
+          <circle cx="150" cy="100" r="2" fill="#c4a878" opacity="0.6"/>
+          <circle cx="170" cy="70" r="2.5" fill="#c4a878" opacity="0.6"/>
+          <circle cx="135" cy="120" r="2" fill="#c4a878" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="meta">DIARIO N° 12 / NOVEMBRE</div>
+      <h3>I funghi micorrizici, contadini invisibili</h3>
+      <p>Sotto un metro quadro di prato sano vivono fino a 20 km di filamenti fungini. Ecco perché non ariamo.</p>
+    </a>
+    <a href="diario.html" class="diario-card small" style="text-decoration:none;">
+      <div class="img-wrap small">
+        <svg viewBox="0 0 100 100" style="width: 90px; height: 90px;">
+          <ellipse cx="50" cy="50" rx="35" ry="12" fill="#7a2a3a" opacity="0.7"/>
+          <ellipse cx="50" cy="55" rx="32" ry="10" fill="#a83a26" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="meta">DIARIO N° 11 / OTTOBRE</div>
+      <h3>Il lombrico, primo ingegnere agricolo</h3>
+      <p>Quanti ne abbiamo trovati nel campo nord, e cosa significa per noi.</p>
+    </a>
+    <a href="diario.html" class="diario-card small" style="text-decoration:none;">
+      <div class="img-wrap small" style="background: #2a3a1f;">
+        <svg viewBox="0 0 100 100" style="width: 90px; height: 90px;">
+          <path d="M30 70 Q30 50 40 40 Q50 30 50 20" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+          <path d="M50 80 L50 30" stroke="#3b5d2a" stroke-width="1.5" fill="none"/>
+          <path d="M70 70 Q70 50 60 40 Q50 30 50 20" stroke="#5a8a3a" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="meta">DIARIO N° 10 / SETTEMBRE</div>
+      <h3>Cover crops: il letto invernale del suolo</h3>
+      <p>Veccia, segale, trifoglio: chi protegge la terra mentre dorme.</p>
+    </a>
+  </div>
+  <div style="text-align: center; margin-top: 48px;">
+    <a href="diario.html" class="link-underline">Tutti gli articoli →</a>
+  </div>
+</section>
+
+<section class="officina-home" id="officina">
+  <div>
+    <div class="pre">— VIENI A TROVARCI —</div>
+    <h2>L'officina è<br>sempre aperta.</h2>
+    <p class="lead">Mercoledì e sabato puoi venire a comprare direttamente in azienda. Una volta al mese organizziamo visite guidate ai campi, al laboratorio del compost e degustazione delle stagionali — sì, anche quelle che non vendiamo ancora a nessuno.</p>
+    <div class="info-grid">
+      <span class="label">SEDE</span><span>Loc. Sottosopra, 12 — Bolzano (BZ)</span>
+      <span class="label">VENDITA</span><span>Mercoledì 9–13 / Sabato 9–17</span>
+      <span class="label">VISITE</span><span>1° sabato del mese — €15 con degustazione</span>
+      <span class="label">SCRIVI</span><span>ciao@sottosopra.it · +39 0471 000 000</span>
+    </div>
+    <div style="margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="officina.html#visite" class="btn-primary">Prenota la visita →</a>
+      <a href="contatti.html" class="btn-outline-dark">Come arrivare →</a>
+    </div>
+  </div>
+  <div>
+    <div class="map">
+      <svg viewBox="0 0 400 320" style="width: 100%; height: 100%;" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="320" fill="#e8dfc9"/>
+        <path d="M0 80 Q100 70 200 90 Q300 110 400 95" stroke="#c4a878" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <path d="M0 110 Q100 100 200 120 Q300 140 400 125" stroke="#c4a878" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <path d="M0 140 Q100 130 200 150 Q300 170 400 155" stroke="#c4a878" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <path d="M0 170 Q100 160 200 180 Q300 200 400 185" stroke="#c4a878" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <path d="M0 200 Q100 190 200 210 Q300 230 400 215" stroke="#c4a878" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <path d="M50 0 Q80 80 60 160 Q40 240 80 320" stroke="#7a8a9a" stroke-width="3" fill="none" opacity="0.6"/>
+        <circle cx="220" cy="160" r="20" fill="none" stroke="#1a1410" stroke-width="1.5"/>
+        <circle cx="220" cy="160" r="6" fill="#1a1410"/>
+        <line x1="220" y1="140" x2="220" y2="115" stroke="#1a1410" stroke-width="1"/>
+        <text x="225" y="115" font-family="JetBrains Mono, monospace" font-size="9" fill="#1a1410" letter-spacing="1">SOTTOSOPRA</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" data-dark="true">
+  <p class="pre">— ISCRIVITI —</p>
+  <h3>Cosa raccogliamo questa settimana?</h3>
+  <p>Un'email il giovedì: il listino, il diario del campo, e le date dei mercati. Niente di più.</p>
+  <form onsubmit="event.preventDefault(); alert('Grazie! Ti scriveremo presto.');">
+    <input type="email" placeholder="la-tua-email@esempio.it" required>
+    <button type="submit">Iscriviti</button>
+  </form>
+</section>
+
+<footer>
+  <div class="strato s1">
+    <div class="strato-row">
+      <div>
+        <div class="label">STRATO 01 · 0 cm</div>
+        <div class="name">Lettiera</div>
+      </div>
+      <div class="desc">Foglie · pacciame · superficie</div>
+    </div>
+  </div>
+  <div class="strato s2">
+    <div class="humus-content">
+      <div class="humus-text">
+        <div class="label">STRATO 02 · −5 cm</div>
+        <div class="name">Humus</div>
+        <div class="logo-line"><strong>Sotto</strong><span style="font-weight:300;">sopra</span></div>
+        <p class="quote">"Lasciamo la terra più ricca di come l'abbiamo trovata."</p>
+      </div>
+      <div class="humus-meta">Sostanza organica<br>matrice viva</div>
+    </div>
+  </div>
+  <div class="strato s3">
+    <div class="footer-cols">
+      <div class="strato-label-col">
+        <div class="label">STRATO 03</div>
+        <div class="name">Strato A</div>
+        <div class="label" style="margin-top: 4px; color: var(--text-muted);">−25 cm</div>
+      </div>
+      <div class="col-acquista">
+        <div class="col-label">ACQUISTA</div>
+        <div class="col-list">
+          <a href="cassetta.html">La Cassetta</a>
+          <a href="officina.html#vendita-diretta">Vendita diretta</a>
+          <a href="officina.html#mercati">Mercati</a>
+          <a href="contatti.html#b2b">B2B / GAS</a>
+        </div>
+      </div>
+      <div class="col-scopri">
+        <div class="col-label">SCOPRI</div>
+        <div class="col-list">
+          <a href="metodo.html">Il metodo</a>
+          <a href="coltiviamo.html">Cosa coltiviamo</a>
+          <a href="diario.html">Diario</a>
+          <a href="officina.html#visite">Visite guidate</a>
+        </div>
+      </div>
+      <div class="col-contatti">
+        <div class="col-label">CONTATTI</div>
+        <div class="col-list">
+          <a href="mailto:ciao@sottosopra.it">ciao@sottosopra.it</a>
+          <a href="tel:+390471000000">+39 0471 000 000</a>
+          <a>Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="strato s4">
+    <div class="strato-row">
+      <div>
+        <span class="label">STRATO 04 · −60 cm</span>
+        <span class="name">Strato B</span>
+      </div>
+      <div class="copy">© 2026 Sottosopra Officina Rigenerativa S.r.l. · P.IVA 00000000000</div>
+    </div>
+  </div>
+  <div class="strato s5">
+    <div class="strato-row">
+      <span class="label">STRATO 05 · −100 cm · ROCCIA MADRE</span>
+      <span class="privacy">Privacy · Cookie · Impressum</span>
+    </div>
+  </div>
+</footer>
+
+<script src="shared/main.js"></script>
+<script src="shared/home.js"></script>
+
+</body>
+</html>
